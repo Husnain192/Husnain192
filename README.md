@@ -1,7 +1,7 @@
 <h2 align="left">Hi 👋! My name is Husnain. I'm a Software Engineer from Pakistan.</h2>
 <div align="center">
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Husnain192&theme=monokai" />
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Husnain192&show_icons=true&theme=monokai&include_all_commits=true&count_private=true" />
+    <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=Husnain192&show_icons=true&theme=monokai&include_all_commits=true&count_private=true" />
 
 <!--     <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Husnain192&layout=compact&langs_count=7&theme=monokai" /> -->
 </div>
