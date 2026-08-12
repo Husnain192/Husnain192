@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An interactive view of Husnain Abbas's public GitHub repository health, activity, and technology breadth.">
+  <title>Husnain's Developer Pulse</title>
+  <link rel="preconnect" href="https://api.github.com">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">LIVE GITHUB PORTFOLIO</p>
+      <h1>Developer Pulse</h1>
+      <p class="intro">A practical view of repository freshness, maintenance signals, and technology breadth—not another contribution counter.</p>
+    </div>
+    <a class="github-link" href="https://github.com/Husnain192" target="_blank" rel="noreferrer">View GitHub profile ↗</a>
+  </header>
+
+  <main>
+    <section class="status" aria-live="polite">
+      <span class="pulse"></span>
+      <span id="statusText">Loading public repository data…</span>
+      <button id="refreshButton" type="button">Refresh</button>
+    </section>
+
+    <section class="metrics" aria-label="Portfolio health summary">
+      <article><span>Active projects</span><strong id="activeCount">—</strong><small>updated in the past year</small></article>
+      <article><span>Maintenance pulse</span><strong id="maintenanceScore">—</strong><small>fresh, documented, non-archived repos</small></article>
+      <article><span>Technology breadth</span><strong id="languageCount">—</strong><small>primary languages in public projects</small></article>
+      <article><span>Original work</span><strong id="originalShare">—</strong><small>repositories that are not forks</small></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><p class="eyebrow">PORTFOLIO MAP</p><h2>Languages by project</h2></div>
+        <p>Bar length represents the number of repositories where a language is primary.</p>
+      </div>
+      <div id="languageChart" class="language-chart"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><p class="eyebrow">PROJECT EXPLORER</p><h2>Repository signals</h2></div>
+        <p>Search, filter, and sort the projects that shape the metrics above.</p>
+      </div>
+      <div class="controls">
+        <label>Search <input id="searchInput" type="search" placeholder="Name, description, or language"></label>
+        <label>Show
+          <select id="typeFilter">
+            <option value="all">All repositories</option>
+            <option value="original">Original work</option>
+            <option value="fork">Forks</option>
+            <option value="active">Updated this year</option>
+          </select>
+        </label>
+        <label>Sort
+          <select id="sortSelect">
+            <option value="updated">Recently updated</option>
+            <option value="name">Name</option>
+            <option value="language">Language</option>
+          </select>
+        </label>
+      </div>
+      <div id="repositoryGrid" class="repository-grid"></div>
+      <p id="emptyState" class="empty" hidden>No repositories match these filters.</p>
+    </section>
+  </main>
+
+  <footer>Public data from the GitHub REST API · Cached in your browser for 15 minutes</footer>
+</body>
+</html>
