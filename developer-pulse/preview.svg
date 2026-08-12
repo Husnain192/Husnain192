@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230" role="img" aria-labelledby="title desc">
+<title id="title">Open Husnain's Developer Pulse</title><desc id="desc">Interactive portfolio health dashboard showing freshness, maintenance signals, technology breadth, and repository filters.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#1b1526"/><stop offset="1" stop-color="#30203f"/></linearGradient><linearGradient id="line" x1="0" x2="1"><stop stop-color="#ff5ea8"/><stop offset="1" stop-color="#a984ff"/></linearGradient></defs>
+<rect width="900" height="230" rx="22" fill="url(#bg)"/><rect x="1" y="1" width="898" height="228" rx="21" fill="none" stroke="#5a416e"/>
+<text x="42" y="48" fill="#ff5ea8" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3">LIVE GITHUB PORTFOLIO</text>
+<text x="42" y="96" fill="#f8f3ff" font-family="Arial,sans-serif" font-size="39" font-weight="700">Developer Pulse</text>
+<text x="42" y="130" fill="#c3b2d2" font-family="Arial,sans-serif" font-size="16">Explore project freshness, maintenance signals, and technology breadth.</text>
+<rect x="42" y="163" width="210" height="40" rx="20" fill="url(#line)"/><text x="72" y="189" fill="#fff" font-family="Arial,sans-serif" font-size="14" font-weight="700">OPEN INTERACTIVE VIEW  →</text>
+<g transform="translate(610 39)"><rect width="225" height="150" rx="14" fill="#ffffff08" stroke="#5a416e"/><text x="20" y="30" fill="#c3b2d2" font-family="Arial,sans-serif" font-size="11">PORTFOLIO SIGNALS</text><rect x="20" y="49" width="165" height="9" rx="5" fill="#31263e"/><rect x="20" y="49" width="132" height="9" rx="5" fill="url(#line)"/><rect x="20" y="75" width="165" height="9" rx="5" fill="#31263e"/><rect x="20" y="75" width="95" height="9" rx="5" fill="url(#line)"/><rect x="20" y="101" width="165" height="9" rx="5" fill="#31263e"/><rect x="20" y="101" width="146" height="9" rx="5" fill="url(#line)"/><text x="20" y="134" fill="#57e6b1" font-family="Arial,sans-serif" font-size="11">● LIVE PUBLIC DATA</text></g>
+</svg>
