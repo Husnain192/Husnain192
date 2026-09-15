@@ -1,6 +1,7 @@
 {
   "username": "Husnain192",
   "updated": "2026-09-15",
+  "scope": "public",
   "months": [
     {
       "start": "2025-10-01",
@@ -60,7 +61,7 @@
     {
       "start": "2026-09-01",
       "end": "2026-09-15",
-      "commits": 2
+      "commits": 3
     }
   ]
 }
