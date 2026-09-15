@@ -1,29 +1,75 @@
-<h2 align="center">Hi 👋! My name is Husnain. I'm a Software Engineer from Pakistan.</h2>
+<h1 align="center">Hi, I'm Husnain Abbas 👋</h1>
+
+<p align="center">
+  <strong>Full-Stack Software Engineer</strong> based in Pakistan
+</p>
+
+<p align="center">
+  I build reliable web and mobile products, from responsive interfaces to APIs, databases, authentication, and payment integrations.
+</p>
+
+## About me
+
+- 🎓 BS in Software Engineering from FAST-NUCES
+- 💻 Building production applications with Next.js, React, Laravel, NestJS, PostgreSQL, and Flutter
+- 🔐 Experienced with authentication and payment integrations including Firebase, Stripe, and PayPal
+- ☁️ Expanding my cloud knowledge with AWS
+- 🛡️ Developing practical cybersecurity and penetration-testing skills
+- 🌏 Learning Japanese
+
+## What I work with
+
+| Area | Technologies |
+| --- | --- |
+| Frontend | Next.js, React, TypeScript, JavaScript, Tailwind CSS |
+| Backend | Laravel, PHP, NestJS, Node.js, REST APIs |
+| Data & services | PostgreSQL, Supabase, Firebase |
+| Mobile | Flutter, Dart |
+| Tools & cloud | Git, GitHub, AWS |
+| Foundations | Python, Java, C, C++ |
+
+## Developer Pulse
+
+Explore my public repositories through an interactive view of project activity, technologies, maintenance signals, and repository details.
+
 <div align="center">
-<a href="https://husnain192.github.io/Husnain192/" aria-label="Open the interactive Developer Pulse dashboard">
+  <a href="https://husnain192.github.io/Husnain192/" aria-label="Open the interactive Developer Pulse dashboard">
     <img src="./developer-pulse/preview.svg" alt="Developer Pulse — interactive portfolio health, freshness, and technology dashboard" />
-</a>
+  </a>
 </div>
 
-<h4 align="center">Languages and Technologies I have worked with:</h4> 
-<div align="center" style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 12px; overflow-x: auto;">
-    <img alt="C" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
-    <img alt="C++" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-    <img alt="Java" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-    <img alt="Python" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg">
-    <img alt="Django" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
-    <img alt="Php" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
-    <img alt="Laravel" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
-    <img alt="HTML5" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-    <img alt="CSS3" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-    <img alt="JavaScript" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-    <img alt="TypeScript" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
-    <img alt="Node.js" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-    <img alt="Nest.js" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" />
-    <img alt="React" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-    <img alt="Next.js" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg">
-    <img alt="Flutter" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
-    <img alt="Firebase" height="30" src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg">
-    <img alt="PostgreSQL" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg">
-    <img alt="git" height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg">
+<p align="center">
+  <a href="https://husnain192.github.io/Husnain192/"><strong>Open Developer Pulse →</strong></a>
+</p>
+
+## Technology toolkit
+
+<div align="center">
+  <img alt="TypeScript" title="TypeScript" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+  &nbsp;
+  <img alt="JavaScript" title="JavaScript" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+  &nbsp;
+  <img alt="React" title="React" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+  &nbsp;
+  <img alt="Next.js" title="Next.js" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />
+  &nbsp;
+  <img alt="Node.js" title="Node.js" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+  &nbsp;
+  <img alt="NestJS" title="NestJS" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" />
+  &nbsp;
+  <img alt="PHP" title="PHP" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+  &nbsp;
+  <img alt="Laravel" title="Laravel" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
+  &nbsp;
+  <img alt="PostgreSQL" title="PostgreSQL" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+  &nbsp;
+  <img alt="Supabase" title="Supabase" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" />
+  &nbsp;
+  <img alt="Firebase" title="Firebase" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" />
+  &nbsp;
+  <img alt="Flutter" title="Flutter" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+  &nbsp;
+  <img alt="Git" title="Git" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+  &nbsp;
+  <img alt="AWS" title="Amazon Web Services" height="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" />
 </div>
