@@ -1,9 +1,11 @@
-# Contribution graph
+# Commit graph
 
-Run `python3 scripts/update_contributions.py` from the repository root (Python 3.10+; no dependencies).
+Run `python3 scripts/update_commits.py` from the repository root (Python 3.10+, standard library only). Optional `GH_TOKEN` enables authenticated requests; the workflow uses its built-in GitHub token and requires no personal token.
 
-The script fetches the public GitHub contribution calendar once, validates a complete consecutive year, and atomically replaces `assets/contributions.svg`. It uses no REST/GraphQL quota, personal access token, or third-party rendering service. Counts match the activity visible on the public profile; private repository details are never requested.
+The line chart plots monthly authored commit counts for the latest twelve calendar months, including the partial current month. It queries GitHub commit search with `author:Husnain192 is:public author-date:START..END`. Merge commits are included. GitHub searches default branches only; private repositories, other branches, and commits not linked to the author account are outside this view. Search indexing may lag. These are commit-search totals, not contribution-calendar totals.
 
-The workflow refreshes daily at 02:23 UTC and can be run manually from Actions → Update contribution graph → Run workflow. Scheduled runs may be delayed or disabled by GitHub after prolonged repository inactivity. A failed fetch or changed HTML format fails the job and keeps the previously committed image visible; check Actions if the displayed update date stops advancing.
+One small search response per month supplies `total_count`; totals are not computed from a truncated page of results. Twelve requests run once daily, with pacing. Profile views load a committed SVG and make no API calls. The graph avoids shared card-service quotas, but its daily updater remains subject to GitHub's API availability and limits.
 
-Colors and layout are defined in `render()`. The GitHub HTML markup is an external dependency; if it changes, update `CalendarParser` and `parse_calendar`. To reproduce with a saved response, pass `--input calendar.html`.
+The workflow runs at 02:23 UTC daily and can also be triggered under Actions → Update commit graph → Run workflow. Failed requests or incomplete search results fail before replacing the last graph. GitHub may delay schedules or disable them after prolonged repository inactivity.
+
+`assets/commits.json` records the monthly counts. Re-render without networking using `python3 scripts/update_commits.py --input assets/commits.json`. Styling is in `render()`.

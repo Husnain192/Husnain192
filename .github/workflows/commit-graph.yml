@@ -1,4 +1,4 @@
-name: Update contribution graph
+name: Update commit graph
 on:
   schedule:
     - cron: '23 2 * * *'
@@ -6,12 +6,12 @@ on:
   push:
     branches: [main]
     paths:
-      - scripts/update_contributions.py
-      - .github/workflows/contribution-graph.yml
+      - scripts/update_commits.py
+      - .github/workflows/commit-graph.yml
 permissions:
   contents: write
 concurrency:
-  group: contribution-graph
+  group: commit-graph
   cancel-in-progress: false
 jobs:
   update:
@@ -21,16 +21,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Generate contribution SVG
-        run: python3 scripts/update_contributions.py
+      - name: Generate commit SVG
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_commits.py
       - name: Commit updated graph
         run: |
-          git add assets/contributions.svg
+          git add assets/commits.svg assets/commits.json
           if git diff --cached --quiet; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update contribution graph"
+          git commit -m "Update commit graph"
           git pull --rebase origin main
           git push origin HEAD:main
