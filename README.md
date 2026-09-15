@@ -1,6 +1,6 @@
 <h2 align="center">Hi 👋! My name is Husnain. I'm a Software Engineer from Pakistan.</h2>
 <div align="center">
-    <img src="./assets/commits.svg" width="900" alt="Husnain’s monthly commits — line chart of authored commits across public default branches over the last twelve calendar months" />
+    <img src="./assets/commits.svg" width="900" alt="Husnain’s monthly commits — line chart of authored commits across default branches over the last twelve calendar months" />
 
 <a href="https://husnain192.github.io/Husnain192/" aria-label="Open the interactive Developer Pulse dashboard">
     <img src="./developer-pulse/preview.svg" alt="Developer Pulse — interactive portfolio health, freshness, and technology dashboard" />

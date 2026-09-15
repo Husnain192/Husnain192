@@ -24,7 +24,8 @@ def month_ranges(today):
 
 
 def collect(username, today):
-    token = os.environ.get("GH_TOKEN")
+    token = os.environ.get("PROFILE_STATS_TOKEN") or os.environ.get("GH_TOKEN")
+    include_private = bool(os.environ.get("PROFILE_STATS_TOKEN"))
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "custom-commit-graph"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
@@ -32,7 +33,8 @@ def collect(username, today):
     for start, end in month_ranges(today):
         # total_count counts all matches, without downloading commit messages or
         # truncating totals at the search endpoint's 1,000 retrievable-item limit.
-        query = f"author:{username} is:public author-date:{start}..{end}"
+        visibility = "" if include_private else " is:public"
+        query = f"author:{username}{visibility} author-date:{start}..{end}"
         url = "https://api.github.com/search/commits?" + urlencode({"q": query, "per_page": 1})
         with urlopen(Request(url, headers=headers), timeout=45) as response:
             result = json.load(response)
@@ -44,11 +46,12 @@ def collect(username, today):
         # Stay below search rate limits, including unauthenticated local runs.
         if end != today:
             time.sleep(3 if token else 7)
-    return {"username": username, "updated": str(today), "months": months}
+    return {"username": username, "updated": str(today), "scope": "public_and_private" if include_private else "public", "months": months}
 
 
 def render(data):
     months = data["months"]
+    scope = "Public + accessible private" if data.get("scope") == "public_and_private" else "Public"
     values = [m["commits"] for m in months]
     if len(months) != 12 or any(type(v) is not int or v < 0 for v in values):
         raise ValueError("Expected twelve nonnegative monthly counts")
@@ -59,7 +62,7 @@ def render(data):
     points = [(left + i * (right - left) / 11, bottom - v / ceiling * (bottom - top)) for i, v in enumerate(values)]
     out = ['<svg xmlns="http://www.w3.org/2000/svg" width="900" height="402" viewBox="0 0 900 402" role="img" aria-labelledby="title desc">',
            f'<title id="title">{escape(data["username"])} — monthly commits</title>',
-           '<desc id="desc">Line chart of authored commits in public repositories, grouped by month. ' + escape('; '.join(f'{m["start"][:7]}: {m["commits"]}' for m in months)) + '. Current month is partial.</desc>',
+           f'<desc id="desc">{scope} authored commits, grouped by month. ' + escape('; '.join(f'{m["start"][:7]}: {m["commits"]}' for m in months)) + '. Current month is partial.</desc>',
            '<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a6e22e" stop-opacity="0.28"/><stop offset="100%" stop-color="#a6e22e" stop-opacity="0.015"/></linearGradient></defs>',
            '<rect x="1" y="1" width="898" height="400" rx="18" fill="#272822" stroke="#46483e"/>',
            '<g font-family="DejaVu Sans,Arial,sans-serif">']
@@ -88,7 +91,7 @@ def render(data):
         text(x, 329, label, 11, anchor="middle")
         if i == 0 or month["start"][5:7] == "01":
             text(x, 345, month["start"][:4], 9, anchor="middle")
-    text(28, 372, "Public default-branch commits · Includes merge commits · *Current month is partial", 10)
+    text(28, 372, f"{scope} · Default branches · Includes merges · *Partial month", 10)
     text(28, 390, f'Updated {data["updated"]} UTC · Daily snapshot · Source: GitHub commit search', 10)
     out.append('</g></svg>')
     return "\n".join(out) + "\n"
