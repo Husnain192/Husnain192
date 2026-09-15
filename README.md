@@ -1,6 +1,6 @@
 <h2 align="center">Hi 👋! My name is Husnain. I'm a Software Engineer from Pakistan.</h2>
 <div align="center">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Husnain192&theme=monokai" />
+    <img src="./assets/contributions.svg" width="900" alt="Husnain’s contribution activity — daily contribution calendar, active days, longest streak, and best day" />
 
 <a href="https://husnain192.github.io/Husnain192/" aria-label="Open the interactive Developer Pulse dashboard">
     <img src="./developer-pulse/preview.svg" alt="Developer Pulse — interactive portfolio health, freshness, and technology dashboard" />
