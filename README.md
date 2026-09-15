@@ -15,7 +15,6 @@
 - 🔐 Experienced with authentication and payment integrations including Firebase, Stripe, and PayPal
 - ☁️ Expanding my cloud knowledge with AWS
 - 🛡️ Developing practical cybersecurity and penetration-testing skills
-- 🌏 Learning Japanese
 
 ## What I work with
 
